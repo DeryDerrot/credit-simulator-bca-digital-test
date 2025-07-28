@@ -35,11 +35,15 @@ public class SheetManager {
     }
 
     public void printSheets() {
-        for (Map.Entry<String, LoanRequest> entry : sheets.entrySet()) {
-            System.out.println("============================");
-            System.out.println("sheet name: ");
-            System.out.println(entry.getKey());
-            System.out.println("============================");
+        if (sheets.size() > 0) {
+            for (Map.Entry<String, LoanRequest> entry : sheets.entrySet()) {
+                System.out.println("============================");
+                System.out.println("sheet name: ");
+                System.out.println(entry.getKey());
+                System.out.println("============================");
+            }
+        } else {
+            System.out.println("No sheets found.");
         }
     }
 
